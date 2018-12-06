@@ -1,7 +1,7 @@
-## [GET] List Bank Connections
+## [GET] List Bank Disconnections
 
 ```shell
-curl "ENV_URL/api/v1/clients/bank_connections?app_id=APP_ID"
+curl "ENV_URL/api/v1/clients/bank_disconnections?app_id=APP_ID"
   -X GET
   -H "Accept": "application/json"
   -H "Content-Type": "application/json"
@@ -11,7 +11,7 @@ curl "ENV_URL/api/v1/clients/bank_connections?app_id=APP_ID"
 
 ```json
 {
-  "bank_connections": [
+  "bank_disconnections": [
     {
       "id": "9ffb5c2c-5e65-4a03-bfaa-d06426222b2a",
       "client_identifier": "be8172a5-a51b-462d-816b-1ebc63ca0b95",
@@ -30,7 +30,7 @@ curl "ENV_URL/api/v1/clients/bank_connections?app_id=APP_ID"
 }
 ```
 
-This endpoint returns bank connections, ordered by timestamp (most recent first). Subsequent pages of results can be retrieved by repeating the request and passing in the continuation token returned by the previous response.
+This endpoint returns bank disconnections, ordered by timestamp (most recent first). Subsequent pages of results can be retrieved by repeating the request and passing in the continuation token returned by the previous response.
 
 Parameter | Description
 --------- | -----------

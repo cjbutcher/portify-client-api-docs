@@ -4,6 +4,6 @@
 
 Field | Description
 --------- | -----------
-id | The unique identifier for this perk redemption
+id | The unique identifier for the bank connection
 client_identifier | Your unique identifier for this user
 created_at | The datetime for the bank connection

@@ -21,6 +21,8 @@ includes:
   - enabled_perk_redemptions/index
   - bank_connections/bank_connection
   - bank_connections/index
+  - bank_disconnections/bank_disconnection
+  - bank_disconnections/index
 
 search: true
 ---
