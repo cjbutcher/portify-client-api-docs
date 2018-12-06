@@ -19,6 +19,8 @@ includes:
   - enabled_perk_views/index
   - enabled_perk_redemptions/enabled_perk_redemption
   - enabled_perk_redemptions/index
+  - bank_connections/bank_connection
+  - bank_connections/index
 
 search: true
 ---
