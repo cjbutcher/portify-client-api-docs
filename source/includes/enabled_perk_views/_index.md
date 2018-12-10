@@ -14,24 +14,22 @@ curl "ENV_URL/api/v1/clients/enabled_perk_views?app_id=APP_ID&date=2018-11-15"
   "enabled_perk_views": [
     {
       "id": "9ffb5c2c-5e65-4a03-bfaa-d06426222b2a",
-      "client_identifier": "123412",
-      "brand": "Amazon",
-      "title": "5.0% off orders at Amazon",
-      "custom": false,
+      "client_identifier": "135622",
+      "enabled_perk_id": "0fad8ba8-52fb-48a0-ad40-21146e4b62e1",
       "created_at": "2018-11-15T16:10:24.499Z"
     },
     {
       "id": "ff7df128-74f9-4a5b-a154-e574f823f705",
       "client_identifier": "123412",
-      "brand": "Tesco",
-      "title": "5.0% off at Tesco",
-      "custom": false,
-      "created_at": "2018-11-15T16:10:24.506Z"
-    }
+      "enabled_perk_id": "3de61f43-7ff3-445b-9f4f-f1e2982d37e7",
+      "created_at": "2018-11-15T16:09:24.506Z"
+    },
+    ...
   ],
   "metadata": {
-    "total_records": 2,
-    "continuation_token": null
+    "total_record_count": 3488,
+    "record_count": 50,
+    "continuation_token": 1544458255
   }
 }
 ```
@@ -42,5 +40,5 @@ Parameter | Description
 --------- | -----------
 ACCESS_TOKEN | Your application's active access token [required]
 app_id | Your application's app id [required]
-date | A date string in the format YYYY-MM-DD to retrieve perk views [required]
+date | The date for which you would like to retrieve records (YYYY-MM-DD) [required]
 continuation_token | The token returned by the previous request, if retrieving a subsequent page of results [optional]

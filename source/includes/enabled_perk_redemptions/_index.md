@@ -33,11 +33,13 @@ curl "ENV_URL/api/v1/clients/enabled_perk_redemptions?app_id=APP_ID&date=2018-11
       "money_saved": 500,
       "custom": false,
       "created_at": "2018-11-15T16:10:24.506Z"
-    }
+    },
+    ...
   ],
   "metadata": {
-    "total_records": 2,
-    "continuation_token": null
+    "total_record_count": 201,
+    "record_count": 50,
+    "continuation_token": 1544458255
   }
 }
 ```
@@ -49,5 +51,5 @@ Parameter | Description
 --------- | -----------
 ACCESS_TOKEN | Your application's active access token [required]
 app_id | Your application's app id [required]
-date | A date string in the format YYYY-MM-DD to retrieve perk redemptions [required]
+date | The date for which you would like to retrieve records (YYYY-MM-DD) [required]
 continuation_token | The token returned by the previous request, if retrieving a subsequent page of results [optional]

@@ -15,6 +15,7 @@ curl "ENV_URL/api/v1/clients/enabled_perks/3de61f43-7ff3-445b-9f4f-f1e2982d37e7?
     "id": "3de61f43-7ff3-445b-9f4f-f1e2982d37e7",
     "brand": "Amazon",
     "title": "5.0% off orders at Amazon",
+    "discount": 5.0,
     "custom": false,
     "created_at": "2018-11-15T16:10:24.499Z"
   }

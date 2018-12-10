@@ -13,6 +13,7 @@ includes:
   - access_tokens/access_token
   - access_tokens/create
   - access_tokens/update
+  - metadata
   - signins/signin
   - signins/index
   - enabled_perks/enabled_perk

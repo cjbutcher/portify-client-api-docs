@@ -20,12 +20,14 @@ curl "ENV_URL/api/v1/clients/bank_connections?app_id=APP_ID"
     {
       "id": "9ffb5c2c-5e65-4a03-bfaa-d06426222b2a",
       "client_identifier": "876543",
-      "created_at": "2018-11-15T16:10:24.506Z",
-    }
+      "created_at": "2018-11-15T16:10:23.511Z",
+    },
+    ...
   ],
   "metadata": {
-    "total_records": 2,
-    "continuation_token": null
+    "total_record_count": 123,
+    "record_count": 50,
+    "continuation_token": 1544458255
   }
 }
 ```
