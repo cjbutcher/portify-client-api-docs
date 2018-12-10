@@ -1,4 +1,4 @@
-## [GET] List Sign-ins
+## [GET] List Sign Ins
 
 ```shell
 curl "ENV_URL/api/v1/clients/signins?date=2018-12-10&app_id=APP_ID"

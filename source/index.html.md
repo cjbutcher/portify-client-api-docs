@@ -14,8 +14,8 @@ includes:
   - access_tokens/create
   - access_tokens/update
   - metadata
-  - signins/signin
-  - signins/index
+  - sign_ins/sign_in
+  - sign_ins/index
   - enabled_perks/enabled_perk
   - enabled_perks/show
   - enabled_perk_views/enabled_perk_view

@@ -1,6 +1,6 @@
-# Sign-in
+# Sign In
 
-## The Sign-in Object
+## The Sign In Object
 
 Field | Description
 --------- | -----------
