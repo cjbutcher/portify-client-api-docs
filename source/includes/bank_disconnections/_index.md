@@ -32,7 +32,7 @@ curl "ENV_URL/api/v1/clients/bank_disconnections?app_id=APP_ID"
 }
 ```
 
-This endpoint returns bank disconnections, ordered by timestamp (most recent first). Subsequent pages of results can be retrieved by repeating the request and passing in the continuation token returned by the previous response.
+This endpoint returns bank disconnections, ordered by created_at (most recent first). Subsequent pages of results can be retrieved by repeating the request and passing in the continuation token returned by the previous response.
 
 Parameter | Description
 --------- | -----------
