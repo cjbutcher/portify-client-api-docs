@@ -13,12 +13,12 @@ curl "ENV_URL/api/v1/clients/signins?app_id=APP_ID"
 {
   "signins": [
     {
-      "client_identifier": "be8172a5-a51b-462d-816b-1ebc63ca0b95",
+      "client_identifier": "123412",
       "last_seen": "2018-11-15T16:10:24.499Z",
       "total_visits": 12
     },
     {
-      "client_identifier": "ff7df128-74f9-4a5b-a154-e574f823f705",
+      "client_identifier": "876543",
       "last_seen": "2018-11-15T16:10:24.506Z",
       "total_visits": 5
     }

@@ -14,7 +14,7 @@ curl "ENV_URL/api/v1/clients/enabled_perk_views?app_id=APP_ID&date=2018-11-15"
   "enabled_perk_views": [
     {
       "id": "9ffb5c2c-5e65-4a03-bfaa-d06426222b2a",
-      "client_identifier": "be8172a5-a51b-462d-816b-1ebc63ca0b95",
+      "client_identifier": "123412",
       "brand": "Amazon",
       "title": "5.0% off orders at Amazon",
       "custom": false,
@@ -22,7 +22,7 @@ curl "ENV_URL/api/v1/clients/enabled_perk_views?app_id=APP_ID&date=2018-11-15"
     },
     {
       "id": "ff7df128-74f9-4a5b-a154-e574f823f705",
-      "enrolment_id": "be8172a5-a51b-462d-816b-1ebc63ca0b95",
+      "client_identifier": "123412",
       "brand": "Tesco",
       "title": "5.0% off at Tesco",
       "custom": false,

@@ -15,6 +15,8 @@ includes:
   - access_tokens/update
   - signins/signin
   - signins/index
+  - enabled_perks/enabled_perk
+  - enabled_perks/show
   - enabled_perk_views/enabled_perk_view
   - enabled_perk_views/index
   - enabled_perk_redemptions/enabled_perk_redemption

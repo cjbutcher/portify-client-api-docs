@@ -14,12 +14,12 @@ curl "ENV_URL/api/v1/clients/bank_connections?app_id=APP_ID"
   "bank_connections": [
     {
       "id": "9ffb5c2c-5e65-4a03-bfaa-d06426222b2a",
-      "client_identifier": "be8172a5-a51b-462d-816b-1ebc63ca0b95",
+      "client_identifier": "123412",
       "created_at": "2018-11-15T16:10:24.499Z",
     },
     {
       "id": "9ffb5c2c-5e65-4a03-bfaa-d06426222b2a",
-      "client_identifier": "ff7df128-74f9-4a5b-a154-e574f823f705",
+      "client_identifier": "876543",
       "created_at": "2018-11-15T16:10:24.506Z",
     }
   ],
