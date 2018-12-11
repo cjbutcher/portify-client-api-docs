@@ -1,7 +1,7 @@
 ## [POST] Create Access Token
 
 ```shell
-curl "ENV_URL/clients/access_tokens"
+curl "ENV_URL/clients/api/v1/access_tokens"
   -X POST
   -H "Authorization": "Token token=SECRET"
   -H "Accept": "application/json"

@@ -1,7 +1,7 @@
 ## [GET] List Sign Ins
 
 ```shell
-curl "ENV_URL/api/v1/clients/signins?date=2018-12-10&app_id=APP_ID"
+curl "ENV_URL/clients/api/v1/signins?date=2018-12-10&app_id=APP_ID"
   -X GET
   -H "Accept": "application/json"
   -H "Content-Type": "application/json"

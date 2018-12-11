@@ -1,7 +1,7 @@
 ## [GET] List Enabled Perk Views
 
 ```shell
-curl "ENV_URL/api/v1/clients/enabled_perk_views?app_id=APP_ID&date=2018-11-15"
+curl "ENV_URL/clients/api/v1/enabled_perk_views?app_id=APP_ID&date=2018-11-15"
   -X GET
   -H "Accept": "application/json"
   -H "Content-Type": "application/json"

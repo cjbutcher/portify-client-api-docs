@@ -1,7 +1,7 @@
 ## [POST] Refresh Access Token
 
 ```shell
-curl "ENV_URL/clients/access_tokens/refresh"
+curl "ENV_URL/clients/api/v1/access_tokens/refresh"
   -X POST
   -H "Accept": "application/json"
   -H "Content-Type": "application/json"
