@@ -1,7 +1,7 @@
-## [GET] List Enabled Perk Views
+## [GET] List Sign Ins
 
 ```shell
-curl "ENV_URL/clients/api/v1/enabled_perk_views?app_id=APP_ID&date=2018-11-15" \
+curl "ENV_URL/clients/api/v1/sign_ins?date=2018-12-10&app_id=APP_ID" \
   -X GET \
   -H "Accept: application/json" \
   -H "Content-Type: application/json" \
@@ -11,30 +11,28 @@ curl "ENV_URL/clients/api/v1/enabled_perk_views?app_id=APP_ID&date=2018-11-15" \
 
 ```json
 {
-  "enabled_perk_views": [
+  "sign_ins": [
     {
-      "id": "9ffb5c2c-5e65-4a03-bfaa-d06426222b2a",
-      "client_identifier": "135622",
-      "enabled_perk_id": "0fad8ba8-52fb-48a0-ad40-21146e4b62e1",
+      "id": "39c01faf-94f9-44e5-98d9-d498b90b369a",
+      "client_identifier": "123412",
       "created_at": "2018-11-15T16:10:24.499Z"
     },
     {
-      "id": "ff7df128-74f9-4a5b-a154-e574f823f705",
-      "client_identifier": "123412",
-      "enabled_perk_id": "3de61f43-7ff3-445b-9f4f-f1e2982d37e7",
-      "created_at": "2018-11-15T16:09:24.506Z"
+      "id": "139ddec3-3bf0-4795-be21-37ad9fa1eedf",
+      "client_identifier": "136789",
+      "created_at": "2018-11-15T16:10:21.543Z"
     },
     ...
   ],
   "metadata": {
-    "total_record_count": 3488,
+    "total_record_count": 2345,
     "record_count": 50,
     "continuation_token": "1544458255327"
   }
 }
 ```
 
-This endpoint returns up to 50 perk views per request for a given date. Subsequent pages of results can be retrieved by repeating the request and passing in the continuation token returned by the previous response.
+This endpoint returns user sign-ins on a given date, ordered by created_at (oldest first). Subsequent pages of results can be retrieved by repeating the request and passing in the continuation token returned by the previous response.
 
 Parameter | Description
 --------- | -----------

@@ -13,8 +13,12 @@ includes:
   - access_tokens/access_token
   - access_tokens/create
   - access_tokens/update
-  - signins/signin
-  - signins/index
+  - metadata
+  - sign_ins/sign_in
+  - sign_ins/index
+  - enabled_perks/enabled_perk
+  - enabled_perks/index
+  - enabled_perks/show
   - enabled_perk_views/enabled_perk_view
   - enabled_perk_views/index
   - enabled_perk_redemptions/enabled_perk_redemption
