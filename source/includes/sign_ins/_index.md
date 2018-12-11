@@ -1,11 +1,11 @@
 ## [GET] List Sign Ins
 
 ```shell
-curl "ENV_URL/clients/api/v1/signins?date=2018-12-10&app_id=APP_ID"
-  -X GET
-  -H "Accept": "application/json"
-  -H "Content-Type": "application/json"
-  -H "Authorization": "Token token=ACCESS_TOKEN"
+curl "ENV_URL/clients/api/v1/sign_ins?date=2018-12-10&app_id=APP_ID" \
+  -X GET \
+  -H "Accept: application/json" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Token token=ACCESS_TOKEN"
 ```
 > The above command returns JSON structured like this:
 

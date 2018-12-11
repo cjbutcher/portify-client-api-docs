@@ -1,11 +1,11 @@
 ## [POST] Create Access Token
 
 ```shell
-curl "ENV_URL/clients/api/v1/access_tokens"
-  -X POST
-  -H "Authorization": "Token token=SECRET"
-  -H "Accept": "application/json"
-  -H "Content-Type": "application/json"
+curl "ENV_URL/clients/api/v1/access_tokens" \
+  -X POST \
+  -H "Authorization: Token token=SECRET" \
+  -H "Accept: application/json" \
+  -H "Content-Type: application/json" \
   -d '{
     "app_id": APP_ID
   }'

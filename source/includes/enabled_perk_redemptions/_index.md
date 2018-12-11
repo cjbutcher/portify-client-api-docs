@@ -1,11 +1,11 @@
 ## [GET] List Enabled Perk Redemptions
 
 ```shell
-curl "ENV_URL/clients/api/v1/enabled_perk_redemptions?app_id=APP_ID&date=2018-11-15"
-  -X GET
-  -H "Accept": "application/json"
-  -H "Content-Type": "application/json"
-  -H "Authorization": "Token token=ACCESS_TOKEN"
+curl "ENV_URL/clients/api/v1/enabled_perk_redemptions?app_id=APP_ID&date=2018-11-15" \
+  -X GET \
+  -H "Accept: application/json" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Token token=ACCESS_TOKEN"
 ```
 > The above command returns JSON structured like this:
 

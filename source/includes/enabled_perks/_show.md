@@ -1,11 +1,11 @@
 ## [GET] Show Enabled Perk
 
 ```shell
-curl "ENV_URL/clients/api/v1/enabled_perks/3de61f43-7ff3-445b-9f4f-f1e2982d37e7?app_id=APP_ID"
-  -X GET
-  -H "Accept": "application/json"
-  -H "Content-Type": "application/json"
-  -H "Authorization": "Token token=ACCESS_TOKEN"
+curl "ENV_URL/clients/api/v1/enabled_perks/3de61f43-7ff3-445b-9f4f-f1e2982d37e7?app_id=APP_ID" \
+  -X GET \
+  -H "Accept: application/json" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Token token=ACCESS_TOKEN"
 ```
 > The above command returns JSON structured like this:
 

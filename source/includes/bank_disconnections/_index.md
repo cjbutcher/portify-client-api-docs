@@ -1,11 +1,11 @@
 ## [GET] List Bank Disconnections
 
 ```shell
-curl "ENV_URL/clients/api/v1/bank_disconnections?app_id=APP_ID"
-  -X GET
-  -H "Accept": "application/json"
-  -H "Content-Type": "application/json"
-  -H "Authorization": "Token token=ACCESS_TOKEN"
+curl "ENV_URL/clients/api/v1/bank_disconnections?app_id=APP_ID" \
+  -X GET \
+  -H "Accept: application/json" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Token token=ACCESS_TOKEN"
 ```
 > The above command returns JSON structured like this:
 
