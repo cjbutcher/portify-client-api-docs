@@ -1,7 +1,7 @@
 ## [GET] List Bank Connections
 
 ```shell
-curl "ENV_URL/clients/api/v1/bank_connections?app_id=APP_ID" \
+curl "ENV_URL/clients/api/v1/bank_connections?app_id=APP_ID&date=2018-11-15" \
   -X GET \
   -H "Accept: application/json" \
   -H "Content-Type: application/json" \
@@ -32,10 +32,11 @@ curl "ENV_URL/clients/api/v1/bank_connections?app_id=APP_ID" \
 }
 ```
 
-This endpoint returns bank connections, ordered by created_at (most recent first). Subsequent pages of results can be retrieved by repeating the request and passing in the continuation token returned by the previous response.
+This endpoint returns up to 50 bank connections per request for a given date. Subsequent pages of results can be retrieved by repeating the request and passing in a continuation token, received in the previous response.
 
 Parameter | Description
 --------- | -----------
 ACCESS_TOKEN | Your application's active access token [required]
 app_id | Your application's app id [required]
+date | The date for which you would like to retrieve records (YYYY-MM-DD) [required]
 continuation_token | The token returned by the previous request, if retrieving a subsequent page of results [optional]
