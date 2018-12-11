@@ -27,7 +27,7 @@ curl "ENV_URL/clients/api/v1/signins?date=2018-12-10&app_id=APP_ID"
   "metadata": {
     "total_record_count": 2345,
     "record_count": 50,
-    "continuation_token": 1544458255
+    "continuation_token": "1544458255327"
   }
 }
 ```

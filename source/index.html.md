@@ -17,6 +17,7 @@ includes:
   - sign_ins/sign_in
   - sign_ins/index
   - enabled_perks/enabled_perk
+  - enabled_perks/index
   - enabled_perks/show
   - enabled_perk_views/enabled_perk_view
   - enabled_perk_views/index

@@ -15,8 +15,7 @@ curl "ENV_URL/clients/api/v1/enabled_perk_redemptions?app_id=APP_ID&date=2018-11
     {
       "id": "9ffb5c2c-5e65-4a03-bfaa-d06426222b2a",
       "client_identifier": "123412",
-      "brand": "Amazon",
-      "title": "5.0% off orders at Amazon",
+      "enabled_perk_id": "0fad8ba8-52fb-48a0-ad40-21146e4b62e1",
       "value": 5000,
       "discount": 5.0,
       "money_saved": 250,
@@ -26,8 +25,7 @@ curl "ENV_URL/clients/api/v1/enabled_perk_redemptions?app_id=APP_ID&date=2018-11
     {
       "id": "ff7df128-74f9-4a5b-a154-e574f823f705",
       "client_identifier": "876543",
-      "brand": "Tesco",
-      "title": "5.0% off at Tesco",
+      "enabled_perk_id": "3de61f43-7ff3-445b-9f4f-f1e2982d37e7",
       "value": 10000,
       "discount": 5.0,
       "money_saved": 500,
@@ -39,7 +37,7 @@ curl "ENV_URL/clients/api/v1/enabled_perk_redemptions?app_id=APP_ID&date=2018-11
   "metadata": {
     "total_record_count": 201,
     "record_count": 50,
-    "continuation_token": 1544458255
+    "continuation_token": "1544458255327"
   }
 }
 ```

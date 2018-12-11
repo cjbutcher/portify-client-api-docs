@@ -27,7 +27,7 @@ curl "ENV_URL/clients/api/v1/bank_connections?app_id=APP_ID"
   "metadata": {
     "total_record_count": 123,
     "record_count": 50,
-    "continuation_token": 1544458255
+    "continuation_token": "1544458255327"
   }
 }
 ```
