@@ -1,0 +1,1027 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;shell&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+          </li>
+          <li>
+            <a href="#security" class="toc-h1 toc-link" data-title="Security">Security</a>
+          </li>
+          <li>
+            <a href="#access-token" class="toc-h1 toc-link" data-title="Access Token">Access Token</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#the-access-token-object" class="toc-h2 toc-link" data-title="The Access Token Object">The Access Token Object</a>
+                  </li>
+                  <li>
+                    <a href="#post-create-access-token" class="toc-h2 toc-link" data-title="[POST] Create Access Token">[POST] Create Access Token</a>
+                  </li>
+                  <li>
+                    <a href="#post-refresh-access-token" class="toc-h2 toc-link" data-title="[POST] Refresh Access Token">[POST] Refresh Access Token</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#metadata" class="toc-h1 toc-link" data-title="Metadata">Metadata</a>
+          </li>
+          <li>
+            <a href="#sign-in" class="toc-h1 toc-link" data-title="Sign In">Sign In</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#the-sign-in-object" class="toc-h2 toc-link" data-title="The Sign In Object">The Sign In Object</a>
+                  </li>
+                  <li>
+                    <a href="#get-list-sign-ins" class="toc-h2 toc-link" data-title="[GET] List Sign Ins">[GET] List Sign Ins</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#enabled-perk" class="toc-h1 toc-link" data-title="Enabled Perk">Enabled Perk</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#the-enabled-perk-object" class="toc-h2 toc-link" data-title="The Enabled Perk Object">The Enabled Perk Object</a>
+                  </li>
+                  <li>
+                    <a href="#get-list-enabled-perks" class="toc-h2 toc-link" data-title="[GET] List Enabled Perks">[GET] List Enabled Perks</a>
+                  </li>
+                  <li>
+                    <a href="#get-show-enabled-perk" class="toc-h2 toc-link" data-title="[GET] Show Enabled Perk">[GET] Show Enabled Perk</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#enabled-perk-view" class="toc-h1 toc-link" data-title="Enabled Perk View">Enabled Perk View</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#the-enabled-perk-view-object" class="toc-h2 toc-link" data-title="The Enabled Perk View Object">The Enabled Perk View Object</a>
+                  </li>
+                  <li>
+                    <a href="#get-list-enabled-perk-views" class="toc-h2 toc-link" data-title="[GET] List Enabled Perk Views">[GET] List Enabled Perk Views</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#enabled-perk-redemption" class="toc-h1 toc-link" data-title="Enabled Perk Redemption">Enabled Perk Redemption</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#the-enabled-perk-redemption-object" class="toc-h2 toc-link" data-title="The Enabled Perk Redemption Object">The Enabled Perk Redemption Object</a>
+                  </li>
+                  <li>
+                    <a href="#get-list-enabled-perk-redemptions" class="toc-h2 toc-link" data-title="[GET] List Enabled Perk Redemptions">[GET] List Enabled Perk Redemptions</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#bank-connection" class="toc-h1 toc-link" data-title="Bank Connection">Bank Connection</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#the-bank-connection-object" class="toc-h2 toc-link" data-title="The Bank Connection Object">The Bank Connection Object</a>
+                  </li>
+                  <li>
+                    <a href="#get-list-bank-connections" class="toc-h2 toc-link" data-title="[GET] List Bank Connections">[GET] List Bank Connections</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#bank-disconnection" class="toc-h1 toc-link" data-title="Bank Disconnection">Bank Disconnection</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#the-bank-disconnection-object" class="toc-h2 toc-link" data-title="The Bank Disconnection Object">The Bank Disconnection Object</a>
+                  </li>
+                  <li>
+                    <a href="#get-list-bank-disconnections" class="toc-h2 toc-link" data-title="[GET] List Bank Disconnections">[GET] List Bank Disconnections</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>Welcome to the Portify Client API. This is a private API reserved only for use by Portify&#39;s client organisations.</p>
+
+<p>To be able to use this API, you must have been given the following variables, unique to your organisation:</p>
+
+<p>APP_ID (unique identifier for your app)</p>
+
+<p>SECRET (unique password for your app, used when creating a new access_token)</p>
+
+<p>ENV_URL (url where the Portify Client API is hosted)</p>
+<h1 id='authentication'>Authentication</h1>
+<p>As a client organisation that has requested access to this API, you will have received an APP_ID and SECRET.</p>
+
+<p>1) Use these credentials on the access_tokens#create endpoint to create an access token. Store this token as it is used to authenticate future requests. It is recommended to store the corresponding refresh token as well.</p>
+
+<p>2) Your access token will expire 24 hours after creation. When the token expires, use the access_token#update endpoint to revive the same access token for another 24 hours.</p>
+
+<p>You can create a new access token instead, though this is not advised. Creating a new access token will invalidate any other active access tokens belonging to your application.</p>
+<h1 id='security'>Security</h1>
+<p>In addition to the aforementioned SECRET tokens and access token authentication, the Portify Client API will reject any requests from IP addresses that you have not whitelisted. Please contact the Portify development team to manage your whitelisted IPs.</p>
+
+<p>This feature can be disabled on request for the staging environment.</p>
+<h1 id='access-token'>Access Token</h1><h2 id='the-access-token-object'>The Access Token Object</h2>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>access_token</td>
+<td>The access token</td>
+</tr>
+<tr>
+<td>expires_at</td>
+<td>The datetime at which the access token will expire if not refreshed</td>
+</tr>
+<tr>
+<td>refresh_token</td>
+<td>The token that can be used to revive the access token for another 24 hours</td>
+</tr>
+<tr>
+<td>refreshed_at</td>
+<td>The datetime at which the access token was last refreshed</td>
+</tr>
+</tbody></table>
+<h2 id='post-create-access-token'>[POST] Create Access Token</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"ENV_URL/clients/api/v1/access_tokens"</span> <span class="se">\</span>
+  -X POST <span class="se">\</span>
+  -H <span class="s2">"Authorization: Token token=SECRET"</span> <span class="se">\</span>
+  -H <span class="s2">"Accept: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -d <span class="s1">'{
+    "app_id": APP_ID
+  }'</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"W801u8F66xSb_qNRJLXwxczorZVhUku3MM5vSP95arY"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"expires_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-11-17T15:35:30.182Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qaKgQejogCPUyNfs8WNF5qEx"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"refreshed_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint returns an access token valid for up to 24 hours, before it needs to be refreshed.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SECRET</td>
+<td>Your application&#39;s secret token [required]</td>
+</tr>
+<tr>
+<td>app_id</td>
+<td>You application&#39;s app id [required]</td>
+</tr>
+</tbody></table>
+<h2 id='post-refresh-access-token'>[POST] Refresh Access Token</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"ENV_URL/clients/api/v1/access_tokens/refresh"</span> <span class="se">\</span>
+  -X POST <span class="se">\</span>
+  -H <span class="s2">"Accept: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -d <span class="s1">'{
+    "app_id": APP_ID,
+    "access_token": ACCESS_TOKEN,
+    "refresh_token": REFRESH_TOKEN
+  }'</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"W801u8F66xSb_qNRJLXwxczorZVhUku3MM5vSP95arY"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"expires_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-11-17T16:08:35.519Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FXbXovzza53FyiJMnEyEobDd"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"refreshed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-11-16T16:08:35.519Z"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint returns your access token with an updated expires_at timestamp and regenerated refresh_token.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>app_id</td>
+<td>Your application&#39;s app id [required]</td>
+</tr>
+<tr>
+<td>access_token</td>
+<td>The access token you wish to refresh [required]</td>
+</tr>
+<tr>
+<td>refresh_token</td>
+<td>The correct corresponding refresh token for the access token [required]</td>
+</tr>
+</tbody></table>
+<h1 id='metadata'>Metadata</h1>
+<p>Every (non-authentication related) request to the Portify Client API contains a metadata object. This object is designed to assist with pagination. The API will return up to 50 records per request.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>total_record_count</td>
+<td>The number of records that would be returned in the response, were there no pagination</td>
+</tr>
+<tr>
+<td>record_count</td>
+<td>The number of records returned in this request</td>
+</tr>
+<tr>
+<td>continuation_token</td>
+<td>The token you should use on the next request to receive the next page of results</td>
+</tr>
+</tbody></table>
+
+<p>When scraping data, the continuation_token should be retrieved from your previous request, and passed as a query string parameter on your following request. It is a UNIX timestamp that repesents the datetime from which the next page of records were created after. If no continuation_token is passed, records will be returned from the beginning of the given date.</p>
+<h1 id='sign-in'>Sign In</h1><h2 id='the-sign-in-object'>The Sign In Object</h2>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>A unique identifier for the sign-in</td>
+</tr>
+<tr>
+<td>client_identifier</td>
+<td>Your unique identifier for this user</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>A datetime for when the sign-in was performed</td>
+</tr>
+</tbody></table>
+<h2 id='get-list-sign-ins'>[GET] List Sign Ins</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"ENV_URL/clients/api/v1/sign_ins?date=2018-12-10&amp;app_id=APP_ID"</span> <span class="se">\</span>
+  -X GET <span class="se">\</span>
+  -H <span class="s2">"Accept: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: Token token=ACCESS_TOKEN"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"sign_ins"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"39c01faf-94f9-44e5-98d9-d498b90b369a"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"client_identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123412"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-11-15T16:10:24.499Z"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"139ddec3-3bf0-4795-be21-37ad9fa1eedf"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"client_identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"136789"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-11-15T16:10:21.543Z"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"total_record_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">2345</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"record_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"continuation_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1544458255327"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint returns user sign-ins on a given date, ordered by created_at (oldest first). Subsequent pages of results can be retrieved by repeating the request and passing in the continuation token returned by the previous response.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ACCESS_TOKEN</td>
+<td>Your application&#39;s active access token [required]</td>
+</tr>
+<tr>
+<td>app_id</td>
+<td>Your application&#39;s app id [required]</td>
+</tr>
+<tr>
+<td>date</td>
+<td>The date for which you would like to retrieve records (YYYY-MM-DD) [required]</td>
+</tr>
+<tr>
+<td>continuation_token</td>
+<td>The token returned by the previous request, if retrieving a subsequent page of results [optional]</td>
+</tr>
+</tbody></table>
+<h1 id='enabled-perk'>Enabled Perk</h1><h2 id='the-enabled-perk-object'>The Enabled Perk Object</h2>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The unique identifier for this enabled perk</td>
+</tr>
+<tr>
+<td>brand</td>
+<td>The brand of enabled perk</td>
+</tr>
+<tr>
+<td>title</td>
+<td>The title of the enabled perk</td>
+</tr>
+<tr>
+<td>discount</td>
+<td>The discount set on the enabled perk</td>
+</tr>
+<tr>
+<td>custom</td>
+<td>A boolean indicating whether this perk is custom to your organisation</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>The datetime at which the perk was redeemed</td>
+</tr>
+</tbody></table>
+<h2 id='get-list-enabled-perks'>[GET] List Enabled Perks</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"ENV_URL/clients/api/v1/enabled_perks?app_id=APP_ID"</span> <span class="se">\</span>
+  -X GET <span class="se">\</span>
+  -H <span class="s2">"Accept: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: Token token=ACCESS_TOKEN"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"enabled_perks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9ffb5c2c-5e65-4a03-bfaa-d06426222b2a"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Amazon"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5.0% off orders at Amazon"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"discount"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"custom"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-11-15T16:10:24.499Z"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ff7df128-74f9-4a5b-a154-e574f823f705"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tesco"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5.0% off at Tesco"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"discount"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"custom"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-11-15T16:10:24.506Z"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"total_record_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">76</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"record_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"continuation_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1544458255327"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint returns up to 50 enabled perks per request. Subsequent pages of results can be retrieved by repeating the request and passing in a continuation token, received in the previous response.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ACCESS_TOKEN</td>
+<td>Your application&#39;s active access token [required]</td>
+</tr>
+<tr>
+<td>app_id</td>
+<td>Your application&#39;s app id [required]</td>
+</tr>
+<tr>
+<td>continuation_token</td>
+<td>The token returned by the previous request, if retrieving a subsequent page of results [optional]</td>
+</tr>
+</tbody></table>
+<h2 id='get-show-enabled-perk'>[GET] Show Enabled Perk</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"ENV_URL/clients/api/v1/enabled_perks/3de61f43-7ff3-445b-9f4f-f1e2982d37e7?app_id=APP_ID"</span> <span class="se">\</span>
+  -X GET <span class="se">\</span>
+  -H <span class="s2">"Accept: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: Token token=ACCESS_TOKEN"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"enabled_perk"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3de61f43-7ff3-445b-9f4f-f1e2982d37e7"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Amazon"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5.0% off orders at Amazon"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"discount"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"custom"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-11-15T16:10:24.499Z"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint returns an enabled perk object.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ACCESS_TOKEN</td>
+<td>Your application&#39;s active access token [required]</td>
+</tr>
+<tr>
+<td>id</td>
+<td>The id of the enabled perk to retrieve</td>
+</tr>
+<tr>
+<td>app_id</td>
+<td>Your application&#39;s app id [required]</td>
+</tr>
+</tbody></table>
+<h1 id='enabled-perk-view'>Enabled Perk View</h1><h2 id='the-enabled-perk-view-object'>The Enabled Perk View Object</h2>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The unique identifier for this perk view</td>
+</tr>
+<tr>
+<td>client_identifier</td>
+<td>Your unique identifier for this user</td>
+</tr>
+<tr>
+<td>enabled_perk_id</td>
+<td>The unique identifier for the enabled perk</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>The datetime at which the perk was viewed</td>
+</tr>
+</tbody></table>
+<h2 id='get-list-enabled-perk-views'>[GET] List Enabled Perk Views</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"ENV_URL/clients/api/v1/enabled_perk_views?app_id=APP_ID&amp;date=2018-11-15"</span> <span class="se">\</span>
+  -X GET <span class="se">\</span>
+  -H <span class="s2">"Accept: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: Token token=ACCESS_TOKEN"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"enabled_perk_views"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9ffb5c2c-5e65-4a03-bfaa-d06426222b2a"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"client_identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"135622"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"enabled_perk_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0fad8ba8-52fb-48a0-ad40-21146e4b62e1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-11-15T16:10:24.499Z"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ff7df128-74f9-4a5b-a154-e574f823f705"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"client_identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123412"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"enabled_perk_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3de61f43-7ff3-445b-9f4f-f1e2982d37e7"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-11-15T16:09:24.506Z"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"total_record_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">3488</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"record_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"continuation_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1544458255327"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint returns up to 50 perk views per request for a given date. Subsequent pages of results can be retrieved by repeating the request and passing in the continuation token returned by the previous response.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ACCESS_TOKEN</td>
+<td>Your application&#39;s active access token [required]</td>
+</tr>
+<tr>
+<td>app_id</td>
+<td>Your application&#39;s app id [required]</td>
+</tr>
+<tr>
+<td>date</td>
+<td>The date for which you would like to retrieve records (YYYY-MM-DD) [required]</td>
+</tr>
+<tr>
+<td>continuation_token</td>
+<td>The token returned by the previous request, if retrieving a subsequent page of results [optional]</td>
+</tr>
+</tbody></table>
+<h1 id='enabled-perk-redemption'>Enabled Perk Redemption</h1><h2 id='the-enabled-perk-redemption-object'>The Enabled Perk Redemption Object</h2>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The unique identifier for this perk redemption</td>
+</tr>
+<tr>
+<td>enabled_perk_id</td>
+<td>The unique identifier for the enabled perk</td>
+</tr>
+<tr>
+<td>client_identifier</td>
+<td>Your unique identifier for this user</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>The currency which the purchase was made in (e.g. &#39;GBP&#39;)</td>
+</tr>
+<tr>
+<td>value</td>
+<td>The value of the item purchased by the user (subunits)</td>
+</tr>
+<tr>
+<td>discount</td>
+<td>The discount rate for this perk redemption</td>
+</tr>
+<tr>
+<td>money_saved</td>
+<td>The amount of money the user saved by using this perk (subunits)</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>The datetime at which the perk was redeemed</td>
+</tr>
+</tbody></table>
+<h2 id='get-list-enabled-perk-redemptions'>[GET] List Enabled Perk Redemptions</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"ENV_URL/clients/api/v1/enabled_perk_redemptions?app_id=APP_ID&amp;date=2018-11-15"</span> <span class="se">\</span>
+  -X GET <span class="se">\</span>
+  -H <span class="s2">"Accept: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: Token token=ACCESS_TOKEN"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"enabled_perk_redemptions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9ffb5c2c-5e65-4a03-bfaa-d06426222b2a"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"client_identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123412"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"enabled_perk_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0fad8ba8-52fb-48a0-ad40-21146e4b62e1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GBP"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">5000</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"discount"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"money_saved"</span><span class="p">:</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"custom"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-11-15T16:10:24.499Z"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ff7df128-74f9-4a5b-a154-e574f823f705"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"client_identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"876543"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"enabled_perk_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3de61f43-7ff3-445b-9f4f-f1e2982d37e7"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GBP"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">10000</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"discount"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"money_saved"</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"custom"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-11-15T16:10:24.506Z"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"total_record_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">201</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"record_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"continuation_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1544458255327"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint returns up to 50 perk redemptions per request for a given date. Subsequent pages of results can be retrieved by repeating the request and passing in a continuation token, received in the previous response.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ACCESS_TOKEN</td>
+<td>Your application&#39;s active access token [required]</td>
+</tr>
+<tr>
+<td>app_id</td>
+<td>Your application&#39;s app id [required]</td>
+</tr>
+<tr>
+<td>date</td>
+<td>The date for which you would like to retrieve records (YYYY-MM-DD) [required]</td>
+</tr>
+<tr>
+<td>continuation_token</td>
+<td>The token returned by the previous request, if retrieving a subsequent page of results [optional]</td>
+</tr>
+</tbody></table>
+<h1 id='bank-connection'>Bank Connection</h1><h2 id='the-bank-connection-object'>The Bank Connection Object</h2>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The unique identifier for the bank connection</td>
+</tr>
+<tr>
+<td>client_identifier</td>
+<td>Your unique identifier for this user</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>The datetime for the bank connection</td>
+</tr>
+</tbody></table>
+<h2 id='get-list-bank-connections'>[GET] List Bank Connections</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"ENV_URL/clients/api/v1/bank_connections?app_id=APP_ID&amp;date=2018-11-15"</span> <span class="se">\</span>
+  -X GET <span class="se">\</span>
+  -H <span class="s2">"Accept: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: Token token=ACCESS_TOKEN"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"bank_connections"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9ffb5c2c-5e65-4a03-bfaa-d06426222b2a"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"client_identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123412"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-11-15T16:10:24.499Z"</span><span class="p">,</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9ffb5c2c-5e65-4a03-bfaa-d06426222b2a"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"client_identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"876543"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-11-15T16:10:23.511Z"</span><span class="p">,</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"total_record_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"record_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"continuation_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1544458255327"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint returns up to 50 bank connections per request for a given date. Subsequent pages of results can be retrieved by repeating the request and passing in a continuation token, received in the previous response.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ACCESS_TOKEN</td>
+<td>Your application&#39;s active access token [required]</td>
+</tr>
+<tr>
+<td>app_id</td>
+<td>Your application&#39;s app id [required]</td>
+</tr>
+<tr>
+<td>date</td>
+<td>The date for which you would like to retrieve records (YYYY-MM-DD) [required]</td>
+</tr>
+<tr>
+<td>continuation_token</td>
+<td>The token returned by the previous request, if retrieving a subsequent page of results [optional]</td>
+</tr>
+</tbody></table>
+<h1 id='bank-disconnection'>Bank Disconnection</h1><h2 id='the-bank-disconnection-object'>The Bank Disconnection Object</h2>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The unique identifier for the bank connection that was disconnected</td>
+</tr>
+<tr>
+<td>client_identifier</td>
+<td>Your unique identifier for this user</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>The datetime at which the bank was disconnected</td>
+</tr>
+</tbody></table>
+<h2 id='get-list-bank-disconnections'>[GET] List Bank Disconnections</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"ENV_URL/clients/api/v1/bank_disconnections?app_id=APP_ID&amp;date=2018-11-15"</span> <span class="se">\</span>
+  -X GET <span class="se">\</span>
+  -H <span class="s2">"Accept: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: Token token=ACCESS_TOKEN"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"bank_disconnections"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9ffb5c2c-5e65-4a03-bfaa-d06426222b2a"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"client_identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123412"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-11-15T16:10:24.499Z"</span><span class="p">,</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9ffb5c2c-5e65-4a03-bfaa-d06426222b2a"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"client_identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"876543"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-11-15T16:10:24.506Z"</span><span class="p">,</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"total_record_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"record_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"continuation_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1544458255327"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint returns up to 50 bank disconnections per request for a given date. Subsequent pages of results can be retrieved by repeating the request and passing in a continuation token, received in the previous response.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ACCESS_TOKEN</td>
+<td>Your application&#39;s active access token [required]</td>
+</tr>
+<tr>
+<td>app_id</td>
+<td>Your application&#39;s app id [required]</td>
+</tr>
+<tr>
+<td>date</td>
+<td>The date for which you would like to retrieve records (YYYY-MM-DD) [required]</td>
+</tr>
+<tr>
+<td>continuation_token</td>
+<td>The token returned by the previous request, if retrieving a subsequent page of results [optional]</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
