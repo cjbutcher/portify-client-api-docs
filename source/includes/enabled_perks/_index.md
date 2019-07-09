@@ -18,7 +18,7 @@ curl "ENV_URL/clients/api/v1/enabled_perks?app_id=APP_ID" \
       "title": "5.0% off orders at Amazon",
       "discount": 5.0,
       "custom": false,
-      "created_at": "2018-11-15T16:10:24.499Z"
+      "created_at": "2018-11-15T16:10:24.499Z"  
     },
     {
       "id": "ff7df128-74f9-4a5b-a154-e574f823f705",
