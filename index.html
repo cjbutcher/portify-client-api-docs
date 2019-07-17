@@ -935,7 +935,7 @@
   </span><span class="s2">"enrolments"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c7bf2a8f-7508-45d1-946e-b510d5130653"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user_0@fake-Company.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user_0@fake-company.com"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user 0"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01234 567891"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"score"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2345"</span><span class="p">,</span><span class="w">
@@ -997,7 +997,7 @@ Subsequent pages of results can be retrieved by repeating the request and passin
         "phone": 07654776556",
         "client_identifier": "10000",
         "active": true,
-      "score": 3333
+            "score": 3333
     }
   }'</span>
 </code></pre>
@@ -1039,20 +1039,24 @@ Subsequent pages of results can be retrieved by repeating the request and passin
 <td>Your application&#39;s app id [required]</td>
 </tr>
 <tr>
-<td>email</td>
+<td>enrolment[:email]</td>
 <td>Email for the user being enrolled  [required]</td>
 </tr>
 <tr>
-<td>phone</td>
+<td>enrolment[:phone]</td>
 <td>Phone number of the user enrolled [required]</td>
 </tr>
 <tr>
-<td>name</td>
-<td>The name of user being enrolled [required]</td>
+<td>enrolment[:name]</td>
+<td>The name of user being enrolled [optional]</td>
 </tr>
 <tr>
-<td>client identifier</td>
-<td>Unique client identifier [required]</td>
+<td>enrolment[:score]</td>
+<td>The score associated with this enrolment [optional]</td>
+</tr>
+<tr>
+<td>enrolment[:client_identifier]</td>
+<td>Unique client identifier [optional]</td>
 </tr>
 <tr>
 <td>continuation_token</td>
@@ -1066,6 +1070,7 @@ Subsequent pages of results can be retrieved by repeating the request and passin
   -H <span class="s2">"Authorization: Token token=ACCESS_TOKEN"</span> <span class="se">\</span>
   -d <span class="s1">'{
     "app_id": APP_ID,
+    "email": "user_0@fake-company.com",
     "enrolment": {
       "active": true,
       "score": 3333
@@ -1078,7 +1083,7 @@ Subsequent pages of results can be retrieved by repeating the request and passin
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"enrolment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c7bf2a8f-7508-45d1-946e-b510d5130653"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user_0@fake-Company.com"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user_0@fake-company.com"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user 0"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01234 567891"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"score"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2345"</span><span class="p">,</span><span class="w">
@@ -1112,6 +1117,14 @@ Subsequent pages of results can be retrieved by repeating the request and passin
 <tr>
 <td>email</td>
 <td>The email required to identify the enrolment to remove [required]</td>
+</tr>
+<tr>
+<td>enrolment[:active]</td>
+<td>Whether the enrolment is active or not [optional]</td>
+</tr>
+<tr>
+<td>enrolment[:score]</td>
+<td>The score associated with this enrolment [optional]</td>
 </tr>
 <tr>
 <td>continuation_token</td>
