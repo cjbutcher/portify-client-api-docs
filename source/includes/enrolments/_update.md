@@ -1,21 +1,37 @@
 ## [PATCH] Update Enrolment
 
 ```shell
-curl 'ENV_URL/clients/api/v1/enrolments?app_id=APP_ID&email=EMAIL' \
--X PATCH \
--H 'Accept: application/json' \
--H "Authorization: Token token=ACCESS_TOKEN" \
--H 'Content-Type: application/json' \
+curl "ENV_URL/clients/api/v1/enrolments" \
+  -X PATCH \
+  -H "Accept: application/json" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Token token=ACCESS_TOKEN" \
+  -d '{
+    "app_id": APP_ID,
+    "enrolment": {
+      "active": true,
+      "score": 3333
+    }
+  }'
 ```
 > The above command returns JSON structured like this:
 
 ```json
 {
-    "email": "EMAIL",
+    "enrolment": {
+      "id": "c7bf2a8f-7508-45d1-946e-b510d5130653",
+      "email": "user_0@fake-Company.com",
+      "name": "user 0",
+      "phone": "01234 567891",
+      "score": "2345",
+      "client_identifier": "10000",
+      "active": true,
+      "created_at": "2019-04-12T11:05:11.317Z"
+    },
     "message": {
-        "type": "success",
-        "text": "Enrolment updated successfully",
-        "code": "updated"
+      "type": "success",
+      "text": "Enrolment updated successfully",
+      "code": "enrolment_update_success"
     }
 }
 ```

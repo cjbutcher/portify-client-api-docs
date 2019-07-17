@@ -14,9 +14,10 @@ curl "ENV_URL/clients/api/v1/enrolments?app_id=APP_ID" \
   "enrolments": [
     {
         "id": "c7bf2a8f-7508-45d1-946e-b510d5130653",
-        "email": "user_0@Fake-Company.com",
+        "email": "user_0@fake-Company.com",
         "name": "user 0",
         "phone": "01234 567891",
+        "score": "2345",
         "client_identifier": "10000",
         "active": true,
         "created_at": "2019-04-12T11:05:11.317Z"
@@ -26,6 +27,7 @@ curl "ENV_URL/clients/api/v1/enrolments?app_id=APP_ID" \
         "email": "user_1@fake-company.com",
         "name": "user 1",
         "phone": "01234 567891",
+        "score": "3456",
         "client_identifier": "10001",
         "active": true,
         "created_at": "2019-04-12T11:05:11.432Z"
