@@ -23,6 +23,10 @@ includes:
   - enabled_perk_views/index
   - enabled_perk_redemptions/enabled_perk_redemption
   - enabled_perk_redemptions/index
+  - enrolments/enrolment
+  - enrolments/index
+  - enrolments/create
+  - enrolments/update
   - bank_connections/bank_connection
   - bank_connections/index
   - bank_disconnections/bank_disconnection
