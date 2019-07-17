@@ -14,7 +14,7 @@ curl "ENV_URL/clients/api/v1/enrolments?app_id=APP_ID" \
   "enrolments": [
     {
         "id": "c7bf2a8f-7508-45d1-946e-b510d5130653",
-        "email": "user_0@fake-Company.com",
+        "email": "user_0@fake-company.com",
         "name": "user 0",
         "phone": "01234 567891",
         "score": "2345",

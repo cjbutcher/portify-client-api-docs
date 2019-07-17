@@ -14,7 +14,7 @@ curl "ENV_URL/clients/api/v1/enrolments" \
     	"phone": 07654776556",
     	"client_identifier": "10000",
     	"active": true,
-      "score": 3333
+			"score": 3333
     }
   }'
 ```
@@ -47,8 +47,9 @@ Parameter | Description
 --------- | -----------
 ACCESS_TOKEN | Your application's active access token [required]
 app_id | Your application's app id [required]
-email | Email for the user being enrolled  [required]
-phone | Phone number of the user enrolled [required]
-name | The name of user being enrolled [required]
-client identifier | Unique client identifier [required]
+enrolment[:email] | Email for the user being enrolled  [required]
+enrolment[:phone] | Phone number of the user enrolled [required]
+enrolment[:name] | The name of user being enrolled [optional]
+enrolment[:score] | The score associated with this enrolment [optional]
+enrolment[:client_identifier] | Unique client identifier [optional]
 continuation_token | The token returned by the previous request, if retrieving a subsequent page of results [optional]
