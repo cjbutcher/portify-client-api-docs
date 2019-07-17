@@ -292,6 +292,23 @@
               </ul>
           </li>
           <li>
+            <a href="#enrolment" class="toc-h1 toc-link" data-title="Enrolment">Enrolment</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#the-enrolment-object" class="toc-h2 toc-link" data-title="The Enrolment Object">The Enrolment Object</a>
+                  </li>
+                  <li>
+                    <a href="#get-list-enrolments" class="toc-h2 toc-link" data-title="[GET] List Enrolments">[GET] List Enrolments</a>
+                  </li>
+                  <li>
+                    <a href="#get-create-enrolment" class="toc-h2 toc-link" data-title="[GET] Create Enrolment">[GET] Create Enrolment</a>
+                  </li>
+                  <li>
+                    <a href="#patch-update-enrolment" class="toc-h2 toc-link" data-title="[PATCH] Update Enrolment">[PATCH] Update Enrolment</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#bank-connection" class="toc-h1 toc-link" data-title="Bank Connection">Bank Connection</a>
               <ul class="toc-list-h2">
                   <li>
@@ -596,7 +613,7 @@
       </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5.0% off orders at Amazon"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"discount"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.0</span><span class="p">,</span><span class="w">
       </span><span class="s2">"custom"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-11-15T16:10:24.499Z"</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-11-15T16:10:24.499Z"</span><span class="w">  
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ff7df128-74f9-4a5b-a154-e574f823f705"</span><span class="p">,</span><span class="w">
@@ -859,6 +876,191 @@
 <tr>
 <td>date</td>
 <td>The date for which you would like to retrieve records (YYYY-MM-DD) [required]</td>
+</tr>
+<tr>
+<td>continuation_token</td>
+<td>The token returned by the previous request, if retrieving a subsequent page of results [optional]</td>
+</tr>
+</tbody></table>
+<h1 id='enrolment'>Enrolment</h1><h2 id='the-enrolment-object'>The Enrolment Object</h2>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The unique identifier for this enrolment</td>
+</tr>
+<tr>
+<td>email</td>
+<td>The email of the enrolment</td>
+</tr>
+<tr>
+<td>name</td>
+<td>The name associated to the enrolment</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>The phone number associated to the enrolment</td>
+</tr>
+<tr>
+<td>client_identifier</td>
+<td>The unique client identifier for the enrolment</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>The datetime at which the enrolment was redeemed</td>
+</tr>
+</tbody></table>
+<h2 id='get-list-enrolments'>[GET] List Enrolments</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"ENV_URL/clients/api/v1/enrolments?app_id=APP_ID"</span> <span class="se">\</span>
+  -X GET <span class="se">\</span>
+  -H <span class="s2">"Accept: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+  -H <span class="s2">"Authorization: Token token=ACCESS_TOKEN"</span> <span class="se">\</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"enrolments"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c7bf2a8f-7508-45d1-946e-b510d5130653"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user_0@Fake-Company.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user 0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01234 567891"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"client_identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10000"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-04-12T11:05:11.317Z"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8ebac528-9ace-4465-bc43-5a9e35a4a08e"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user_1@fake-company.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user 1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01234 567891"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"client_identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10001"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-04-12T11:05:11.432Z"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+     </span><span class="s2">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+       </span><span class="s2">"total_record_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">111</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"record_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"continuation_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1555067114697"</span><span class="w">
+     </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint returns up to 50 enrolments per request. Subsequent pages of results can be retrieved by repeating the request and passing in a continuation token, received in the previous response.
+Subsequent pages of results can be retrieved by repeating the request and passing in a continuation token, received in the previous response.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ACCESS_TOKEN</td>
+<td>Your application&#39;s active access token [required]</td>
+</tr>
+<tr>
+<td>app_id</td>
+<td>Your application&#39;s app id [required]</td>
+</tr>
+<tr>
+<td>continuation_token</td>
+<td>The token returned by the previous request, if retrieving a subsequent page of results [optional]</td>
+</tr>
+</tbody></table>
+<h2 id='get-create-enrolment'>[GET] Create Enrolment</h2><pre class="highlight shell tab-shell"><code> curl <span class="s2">"ENV_URL/clients/api/v1/enrolments?app_id=APP_ID&amp;email=EMAIL&amp;phone=PHONE&amp;name=NAME&amp;client_identifier=CLIENT_ID"</span> <span class="se">\ </span>
+    -X POST <span class="se">\</span>
+   -H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+   -H <span class="s2">"Authorization: Token token=ACCESS_TOKEN"</span> <span class="se">\</span>
+   -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\ </span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint creates an enrolment for a given email.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ACCESS_TOKEN</td>
+<td>Your application&#39;s active access token [required]</td>
+</tr>
+<tr>
+<td>app_id</td>
+<td>Your application&#39;s app id [required]</td>
+</tr>
+<tr>
+<td>email</td>
+<td>Email for the user being enrolled  [required]</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>Phone number of the user enrolled [required]</td>
+</tr>
+<tr>
+<td>name</td>
+<td>The name of user being enrolled [required]</td>
+</tr>
+<tr>
+<td>client identifier</td>
+<td>Unique client identifier [required]</td>
+</tr>
+<tr>
+<td>continuation_token</td>
+<td>The token returned by the previous request, if retrieving a subsequent page of results [optional]</td>
+</tr>
+</tbody></table>
+<h2 id='patch-update-enrolment'>[PATCH] Update Enrolment</h2><pre class="highlight shell tab-shell"><code>curl <span class="s1">'ENV_URL/clients/api/v1/enrolments?app_id=APP_ID&amp;email=EMAIL'</span> <span class="se">\</span>
+-X PATCH <span class="se">\</span>
+-H <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
+-H <span class="s2">"Authorization: Token token=ACCESS_TOKEN"</span> <span class="se">\</span>
+-H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EMAIL"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Enrolment updated successfully"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"updated"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This update endpoint is used to remove an enrolment.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ACCESS_TOKEN</td>
+<td>Your application&#39;s active access token [required]</td>
+</tr>
+<tr>
+<td>app_id</td>
+<td>Your application&#39;s app id [required]</td>
+</tr>
+<tr>
+<td>email</td>
+<td>The email required to identify the enrolment to remove [required]</td>
 </tr>
 <tr>
 <td>continuation_token</td>
