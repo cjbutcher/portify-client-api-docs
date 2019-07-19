@@ -1,17 +1,41 @@
-## [GET] Create Enrolment
+## [POST] Create Enrolment
 
 ```shell 
- curl "ENV_URL/clients/api/v1/enrolments?app_id=APP_ID&email=EMAIL&phone=PHONE&name=NAME&client_identifier=CLIENT_ID" \ 
-    -X POST \
+ curl "ENV_URL/clients/api/v1/enrolments?app_id=APP_ID" \ 
+   -X POST \
    -H 'Accept: application/json' \
    -H "Authorization: Token token=ACCESS_TOKEN" \
    -H 'Content-Type: application/json' \ 
+   -d '{
+        "user": {
+          "email": EMAIL,
+          "phone": PHONE,
+          "name": NAME
+        },
+        "enrolment": {
+          "client_identifier": CLIENT_ID
+        }
+       }'
 ```
 > The above command returns JSON structured like this:
 
 ```json
 {
-    "success": true
+    "enrolment": {
+        "id": "XXXX",
+        "email": "XXXX",
+        "name": "XXXX",
+        "phone": "XXXX",
+        "client_identifier": "XXXX",
+        "active": "XXXX",
+        "score": "XXXX",
+        "created_at": "XXXX",
+    },
+    "message": {
+        "type": "success",
+        "text": "Enrolment created successfully",
+        "code": "enrolment_create_success"
+    }
 }
 ```
 

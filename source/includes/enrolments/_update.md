@@ -1,11 +1,20 @@
 ## [PATCH] Update Enrolment
 
 ```shell
-curl 'ENV_URL/clients/api/v1/enrolments?app_id=APP_ID&email=EMAIL' \
+curl 'ENV_URL/clients/api/v1/enrolments?app_id=APP_ID' \
 -X PATCH \
 -H 'Accept: application/json' \
 -H "Authorization: Token token=ACCESS_TOKEN" \
 -H 'Content-Type: application/json' \
+-d '{
+      "user": {
+    	  "email": EMAIL
+    	},
+      "enrolment": {
+        "score": SCORE,
+        "active": BOOLEAN
+      }
+    }'
 ```
 > The above command returns JSON structured like this:
 
