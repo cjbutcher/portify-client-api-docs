@@ -7,10 +7,8 @@ curl 'ENV_URL/clients/api/v1/enrolments?app_id=APP_ID' \
 -H "Authorization: Token token=ACCESS_TOKEN" \
 -H 'Content-Type: application/json' \
 -d '{
-      "user": {
-    	  "email": EMAIL
-    	},
       "enrolment": {
+        "email": EMAIL,
         "score": SCORE,
         "active": BOOLEAN
       }

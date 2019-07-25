@@ -7,13 +7,11 @@
    -H "Authorization: Token token=ACCESS_TOKEN" \
    -H 'Content-Type: application/json' \ 
    -d '{
-        "user": {
+        "enrolment": {
+          "client_identifier": CLIENT_ID,
           "email": EMAIL,
           "phone": PHONE,
           "name": NAME
-        },
-        "enrolment": {
-          "client_identifier": CLIENT_ID
         }
        }'
 ```
