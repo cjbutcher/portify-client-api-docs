@@ -1070,9 +1070,9 @@ Subsequent pages of results can be retrieved by repeating the request and passin
   -H <span class="s2">"Authorization: Token token=ACCESS_TOKEN"</span> <span class="se">\</span>
   -d <span class="s1">'{
     "app_id": APP_ID,
-    "email": "user_0@fake-company.com",
     "enrolment": {
       "active": true,
+      "email": "user_0@fake-company.com",
       "score": 3333
     }
   }'</span>
@@ -1115,12 +1115,12 @@ Subsequent pages of results can be retrieved by repeating the request and passin
 <td>Your application&#39;s app id [required]</td>
 </tr>
 <tr>
-<td>email</td>
-<td>The email required to identify the enrolment to remove [required]</td>
-</tr>
-<tr>
 <td>enrolment[:active]</td>
 <td>Whether the enrolment is active or not [optional]</td>
+</tr>
+<tr>
+<td>enrolment[:email]</td>
+<td>The email required to identify the enrolment to remove [required]</td>
 </tr>
 <tr>
 <td>enrolment[:score]</td>
