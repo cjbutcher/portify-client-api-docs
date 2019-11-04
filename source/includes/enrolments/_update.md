@@ -8,9 +8,9 @@ curl "ENV_URL/clients/api/v1/enrolments" \
   -H "Authorization: Token token=ACCESS_TOKEN" \
   -d '{
     "app_id": APP_ID,
-    "email": "user_0@fake-company.com",
     "enrolment": {
       "active": true,
+      "email": "user_0@fake-company.com",
       "score": 3333
     }
   }'
@@ -44,7 +44,7 @@ Parameter | Description
 --------- | -----------
 ACCESS_TOKEN | Your application's active access token [required]
 app_id | Your application's app id [required]
-email | The email required to identify the enrolment to remove [required]
 enrolment[:active] | Whether the enrolment is active or not [optional]
+enrolment[:email] | The email required to identify the enrolment to remove [required]
 enrolment[:score] | The score associated with this enrolment [optional]
 continuation_token | The token returned by the previous request, if retrieving a subsequent page of results [optional]
